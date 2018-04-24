@@ -1,4 +1,4 @@
-package com.ifinancia.ifinancia;
+package com.ifinancia.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +12,5 @@ public class IdenxController {
 		return "index";
 	}
 
-	@RequestMapping("/login")
-	public String login() {
-		return "financias/login";
-	}
+	
 }

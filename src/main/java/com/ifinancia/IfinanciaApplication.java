@@ -1,4 +1,4 @@
-package com.ifinancia.ifinancia;
+package com.ifinancia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

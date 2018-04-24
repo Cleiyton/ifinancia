@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Login</title>
+  <title>Cadastro</title>
   <link rel="icon" href="images/favicoIfinacia.png">
    
 
   <!-- Bootstrap -->
   <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/estilofinancia.css" rel="stylesheet">
+
 
     </head>
 
@@ -28,7 +30,7 @@
         <div class="row">
           <div class="col-md-12 centro">
 
-            <form class="form-group" data-toggle="validator" role="form">
+            <form class="form-group" data-toggle="validator" role="form" method="post">
               <button type="button" class="btn btn-primary btn-block btn-botao">
                 entrar com o facebook
               </button><br/><br/>
@@ -38,13 +40,18 @@
               </div><br/>
 
               <div class="form-group">
-                <input type="text" class="form-control" name="" placeholder="Nome do usuario ou endereço de email" id="Email" data-error="Digite seu email o seu usuario" required>
+                <input type="text" class="form-control" value="" name="email" placeholder="endereço de email" data-error="Digite seu email o seu usuario" required>
 
 	
               </div>
 
               <div class="form-group">
-                <input type="password" name="" class="form-control" placeholder="Senha" id="senha" data-error="digite a senha " required>
+                <input type="text" name="usuario" value="" class="form-control" placeholder="usuario"  data-error="digite a senha " required>
+              	 <div class="help-block with-errors"></div>
+              </div>
+              
+              <div class="form-group">
+                <input type="password" value="" name="senha" class="form-control" placeholder="Senha"  data-error="digite a senha " required>
               	 <div class="help-block with-errors"></div>
               </div>
 
