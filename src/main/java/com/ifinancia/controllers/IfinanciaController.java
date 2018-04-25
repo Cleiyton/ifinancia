@@ -29,4 +29,10 @@ public class IfinanciaController {
 		/*redirect esta redirecionando ele para o method get*/
 		return "redirect:/cadastra";
 	}	
+	
+	@RequestMapping("/lancamento")
+	public String cadastrarLançamento() {
+		return "financias/lancamento";
+		
+	}	
 }

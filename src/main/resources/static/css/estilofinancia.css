@@ -134,6 +134,8 @@ html, body, .capa{
 
 
 
+
+
 	
 	
 	/* -- secao servico --*/
@@ -274,9 +276,10 @@ html, body, .capa{
 
 	}
 
-	.audio{
 	
-		width:40px; 
+	.escondido{
+
+		display: none;
 	}
 	/* ========================= Tipografia ========================*/
 
