@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ifinancia.models.Cadastro;
+import com.ifinancia.models.Lancamento;
 import com.ifinancia.repository.IfinanciaRepository;
+import com.ifinancia.repository.LacamentoRepository;
 
 @Controller
 public class IfinanciaController {
@@ -14,6 +16,9 @@ public class IfinanciaController {
 	 estancia automaticamente*/
 	@Autowired
 	private IfinanciaRepository ir;
+	
+	@Autowired
+	private LacamentoRepository lr;
 	
 	/*estamos definindo o tipo de metodo para */
 	@RequestMapping(value="/cadastra", method=RequestMethod.GET)
@@ -30,9 +35,22 @@ public class IfinanciaController {
 		return "redirect:/cadastra";
 	}	
 	
-	@RequestMapping("/lancamento")
-	public String cadastrarLançamento() {
+	@RequestMapping(value = "/lancamento", method =RequestMethod.GET)
+	public String lancamentoCadastro(){
+		
 		return "financias/lancamento";
 		
-	}	
+		
+	}
+	
+	@RequestMapping(value = "/lancamento", method =RequestMethod.POST)
+	public String lancamentoCadastro(Lancamento lancamento){
+		lr.save(lancamento);
+		
+		return "redirect:/lancamento";
+		
+		
+	}
+	
+	
 }
